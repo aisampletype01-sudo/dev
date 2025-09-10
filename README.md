@@ -2,9 +2,7 @@
 
 퍼블 하드코딩용
 
-## 온라인 에디터
 
-[github.dev](https://expert-space-zebra-697qq54745pqc55p6.github.dev/)
 <!-- This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
