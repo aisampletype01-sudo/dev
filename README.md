@@ -1,6 +1,11 @@
 # ai-sample-page
 
-This template should help get you started developing with Vue 3 in Vite.
+퍼블 하드코딩용
+
+## 온라인 에디터
+
+[github.dev](https://expert-space-zebra-697qq54745pqc55p6.github.dev/)
+<!-- This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
@@ -8,21 +13,21 @@ This template should help get you started developing with Vue 3 in Vite.
 
 ## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+See [Vite Configuration Reference](https://vite.dev/config/). -->
 
-## Project Setup
+### Project Setup
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+#### Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+#### Compile and Minify for Production
 
 ```sh
 npm run build
