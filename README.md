@@ -31,4 +31,5 @@ npm run dev
 
 ```sh
 npm run build
+npm run deploy  /* github pages에 배포*/
 ```
