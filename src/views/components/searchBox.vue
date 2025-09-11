@@ -1,5 +1,6 @@
 <script setup>
-import { ref, watchEffect } from 'vue'
+// import { ref, watchEffect } from 'vue'
+import IconSearch from '../../assets/images/icons/iconSearch.vue'
 
 </script>
 
@@ -8,11 +9,15 @@ import { ref, watchEffect } from 'vue'
         <div class="wrap"> 
             <h2 class="searchBox-title">Discover a new adventure</h2>
             <div class="frm-group">
-                <input id="frm-search" type="text" name="search">
+                <input 
+                    id="frm-search" 
+                    type="text" 
+                    name="search" 
+                    placeholder="London, Bankok etc"
+                    class="frm-search"
+                >
                 <button class="btn-search">
-                    <span class="icon">
-                        <!-- <img src="../../assets/images/icon_search.svg" alt=""> -->
-                    </span>
+                    <span class="icon"><IconSearch /></span>
                 </button>
             </div>
         </div>
@@ -43,18 +48,19 @@ import { ref, watchEffect } from 'vue'
         height:43px;
         padding-left:20px;
         font-size:14px;
+        box-shadow: 0 2px 5px rgba(117, 103, 191, 0.25);
         &::placeholder{
           color:#cecece;  
         }
     }
     .btn-search{
         position:absolute;
-        top:4px;
-        right:4px;
-        width:35px;
-        height:35px;
+        top:2px;
+        right:0;
         .icon{
             display:block;
+            width:36px;
+            height:36px;
         }
     }
 }

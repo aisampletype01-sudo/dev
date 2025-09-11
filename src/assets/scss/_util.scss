@@ -92,6 +92,11 @@ body {
 button{
   border: 0;
   box-shadow: none;
+  background: none;
+}
+
+ul, ol, dl{
+  list-style: none;
 }
 
 // @media (min-width: 1024px) {
