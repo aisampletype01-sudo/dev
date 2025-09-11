@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 import main from '@/views/pages/main.vue'
 import sub1 from '@/views/pages/subPage.vue'
@@ -23,9 +23,9 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
-    // base: process.env.BASE_URL,
-    routes,
+  // history: createWebHashHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
+  routes,
 });
 
 export default router;
