@@ -3,7 +3,7 @@ import Header from '../components/Header.vue'
 import SearchBox from '../components/searchBox.vue'
 import Tab from '../components/tab.vue'
 import Footer from '../components/Footer.vue'
-import ImgSlider from '../section/imgSlider.vue'
+import ImgSlider from '../components/imgSlider.vue'
 </script>
 
 <template>

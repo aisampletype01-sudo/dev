@@ -1,33 +1,38 @@
 <script setup>
 import { ref, watchEffect } from 'vue'
-const props = defineProps({
-    title: String
-})
-watchEffect(() => {
-  console.log(props.title)
-})
+
 </script>
 
 <template>
     <div class="searchBox">
-        <h2 class="searchBox-title">Discover a new adventure</h2>
-        <div class="frm-group">
-            <input id="frm-search" type="text" name="search">
-            <button class="btn-search"><span class="icon" /></button>
+        <div class="wrap"> 
+            <h2 class="searchBox-title">Discover a new adventure</h2>
+            <div class="frm-group">
+                <input id="frm-search" type="text" name="search">
+                <button class="btn-search">
+                    <span class="icon">
+                        <!-- <img src="../../assets/images/icon_search.svg" alt=""> -->
+                    </span>
+                </button>
+            </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .searchBox{
+    .wrap{
+        width:70vw;
+        margin:auto;
+    }
     &-title{
         font-size:17px;
         color:#5f4cbb;
+        text-align: center;
         margin-bottom: 20px;
     }
     .frm-group{
         border-radius: 50px;
-        width:70vw;
         height: 43px;
         position:relative;
     }
@@ -50,7 +55,6 @@ watchEffect(() => {
         height:35px;
         .icon{
             display:block;
-            background:url('../../assets/images/G_icon.svg') no-repeat 100% 100%;
         }
     }
 }

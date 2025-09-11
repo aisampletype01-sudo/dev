@@ -2,19 +2,22 @@
 import { ref, watchEffect } from 'vue'
 
 const tabList = ref([
-  {text:'wallet', img:'../../assets/images/btn_wallet_off.png'},  
-  {text:'pick', img:'../../assets/images/btn_pick_off.png'},
-  {text:'home', img:'../../assets/images/btn_home_off.png'},
-  {text:'setting', img:'../../assets/images/btn_setting_off.png'},
-  {text:'mypage', img:'../../assets/images/btn_mypage_off.png'},
+  {text:'featured', active:true},
+  {text:'trendy'},
+  {text:'visited'},
 ])
 
-// const props = defineProps({
-//     title: String
-// })
-// watchEffect(() => {
-//   console.log(props.title)
-// })
+const active = ref('')
+const clickHender = (e)=>{
+    console.log(e.target)
+    console.log(e)
+}
+// const props = defineProps(['active']);
+
+watchEffect(() => {
+  //console.log(props.active)
+  console.log(active.value)
+})
 </script>
 
 <template>
@@ -22,10 +25,12 @@ const tabList = ref([
     <div class="tabBox-area">
         <button 
             class="tabBtn"
+            :class="item.active && 'is-active'"
             v-for="(item,i) in tabList" :key="i"
+            @click="clickHender"
         >
             <span class="text">{{ item.text }}</span>
-            <span class="bar"></span>
+            <span v-if="item.active" class="bar"></span>
         </button>
     </div>
   </div>
@@ -41,9 +46,11 @@ const tabList = ref([
         &:not(:last-child){margin-right:38px;}
         font-size:17px;
         color:#c5c1c9;
+        background:none;
         position:relative;
         .text{
             padding-bottom:10px;
+            text-transform: capitalize;
         }
         .bar{
             position:absolute;
@@ -55,6 +62,7 @@ const tabList = ref([
             display: none;
         }
         &.is-active{
+            color: #f9a58b;
             .bar{display:block;}
         }
     }
