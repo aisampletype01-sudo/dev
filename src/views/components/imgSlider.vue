@@ -2,11 +2,11 @@
 import { ref, watchEffect } from 'vue'
 
 const tabList = ref([
-  {text:'wallet', img:'../../assets/btn_wallet_off.png'},  
-  {text:'pick', img:'../../assets/btn_pick_off.png'},
-  {text:'home', img:'../../assets/btn_home_off.png'},
-  {text:'setting', img:'../../assets/btn_setting_off.png'},
-  {text:'mypage', img:'../../assets/btn_mypage_off.png'},
+  {text:'wallet', img:'../../assets/images/btn_wallet_off.png'},  
+  {text:'pick', img:'../../assets/images/btn_pick_off.png'},
+  {text:'home', img:'../../assets/images/btn_home_off.png'},
+  {text:'setting', img:'../../assets/images/btn_setting_off.png'},
+  {text:'mypage', img:'../../assets/images/btn_mypage_off.png'},
 ])
 
 // const props = defineProps({

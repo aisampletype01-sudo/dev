@@ -50,7 +50,7 @@ watchEffect(() => {
         height:35px;
         .icon{
             display:block;
-            background:url('../../assets/G_icon.svg') no-repeat 100% 100%;
+            background:url('../../assets/images/G_icon.svg') no-repeat 100% 100%;
         }
     }
 }
