@@ -1,5 +1,10 @@
 <script setup>
 import { ref, watchEffect } from 'vue'
+
+const imgPath = (img) => {
+    return new URL(`/src/assets/images/${img}.png`, import.meta.url).href;
+}
+
 const props = defineProps({
     title: String
 })
@@ -13,7 +18,7 @@ watchEffect(() => {
     <div class="wrap">
         <p class="p-head_title">{{props.title}}</p>
         <div class="p-head_iconBox">
-            <span class="img"><img src="#" alt=""></span>
+            <span class="img"><img :src="imgPath('icon_profile')" alt=""></span>
         </div>
     </div>
   </header>
@@ -21,6 +26,7 @@ watchEffect(() => {
 
 <style lang="scss" scoped>
  .p-head{
+  margin-top: 45px;
   .wrap{
      display:flex;
      align-items: center;

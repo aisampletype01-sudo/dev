@@ -2,19 +2,19 @@
 import { ref, watchEffect } from 'vue'
 
 const navList = ref([
-  {text:'wallet', img:'../../assets/images/btn_wallet_off.png'},  
-  {text:'pick', img:'../../assets/images/btn_pick_off.png'},
-  {text:'home', img:'../../assets/images/btn_home_off.png'},
-  {text:'setting', img:'../../assets/images/btn_setting_off.png'},
-  {text:'mypage', img:'../../assets/images/btn_mypage_off.png'},
+  {text:'wallet', img:'btn_wallet'},  
+  {text:'pick', img:'btn_pick'},
+  {text:'home', img:'btn_home'},
+  {text:'setting', img:'btn_setting'},
+  {text:'mypage', img:'btn_mypage'},
 ])
 
-// const props = defineProps({
-//     title: String
-// })
-// watchEffect(() => {
-//   console.log(props.title)
-// })
+const active = ref('')
+
+const imgPath = (img) => {
+    return new URL(`/src/assets/images/${img}.png`, import.meta.url).href;
+}
+
 </script>
 
 <template>
@@ -22,9 +22,10 @@ const navList = ref([
     <div class="p-footer_nav">
       <button 
         class="p-footer_nav-btn"
+        :class="active && 'is-active'"
         v-for="(item,i) in navList" :key="i"
       >
-        <span class="img"><img :src="item.img" alt=""></span>
+        <span class="img"><img :src="imgPath(item.img + (active ? '_on' : '_off'))" alt=""></span>
       </button>
     </div>
   </nav>
@@ -32,22 +33,25 @@ const navList = ref([
 
 <style lang="scss" scoped>
 .p-footer{
+  margin: auto -20px 0;
   height: 58px;
   background:#eeecf9;
   &_nav{
     display:flex;
     justify-content: center;
-    padding:15px 20px;
+    padding:8px 20px;
   }
   &_nav-btn{
-    width:28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    &.is-active{
+      color:#FAA58B;
+    }
     span{
       display:block;
-      // position:relative;
-      // &::before{
-      //   content:attr(data-img)
-      // }
+      width:100%;
+      height:100%;
     }
     img{
       width:100%;
