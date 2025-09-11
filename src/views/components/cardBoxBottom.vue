@@ -29,10 +29,7 @@ const imgPath = (img) => {
           <input type="text" value="·········" disabled>
         </dd>
       </dl>
-      <dl>
-        <dt>Exp. Date:</dt>
-        <dd>12/24</dd>
-      </dl>
+      <p>Exp. Date: 12/24</p>
     </div>
   </div>
 </template>

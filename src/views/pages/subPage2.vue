@@ -14,13 +14,16 @@ const imgPath = (img) => {
   <div class="bg-gray">
     <Header title="Confirm Booking"/>
 
-    <div class="p-contentBody">
+    <div class="p-contentBody pb100">
       <CardBoxThum :data="{img:'thum_list1',title:'Place Name Here', text:'Place Name Here'}"/>
     </div>
   </div> 
-  <div class="p-footer">
+  <div class="p-bottom">
     <cardBoxBottom :data="{img:'img-card'}"/>
-    <Btn text="Next Process" large/>
+
+    <div class="btn-area">
+      <Btn text="Next Process" large="true"/>
+    </div>
   </div>
 </template>
 

@@ -10,7 +10,7 @@ import CardBox from '@/views/components/cardBox.vue'
 </script>
 
 <template>thum2
-  <div class="bg-gray">
+  <div class="bg-gray subpage">
     <Header title="Booking Trip"/>
     <div class="p-contentBody">
       <CardBox :data="{img:'thum2', title:'Place Name Here', text:'Place Name Here'}" />
