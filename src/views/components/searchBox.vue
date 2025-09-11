@@ -27,7 +27,7 @@ import IconSearch from '../../assets/images/icons/iconSearch.vue'
 <style lang="scss" scoped>
 .searchBox{
     .wrap{
-        width:70vw;
+        width:70%;
         margin:auto;
     }
     &-title{

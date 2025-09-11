@@ -1,12 +1,9 @@
-<script setup>
-// import HelloWorld from './components/HelloWorld.vue'
-// import TheWelcome from './components/TheWelcome.vue'
-import MainPage from './views/pages/main.vue'
+<script setup> 
 </script>
 
 <template>
   <div class="page">
-    <MainPage />
+    <router-view />
   </div>
 </template>
 

@@ -1,5 +1,4 @@
 <script setup>
-import { ssrImportMetaKey } from 'vite/module-runner';
 import { ref, watchEffect } from 'vue'
 
 const props = defineProps(['data'])
@@ -9,16 +8,16 @@ const props = defineProps(['data'])
 </script>
 
 <template>
-  <div class="tableList date">
-    <p class="th-label">Add Date</p>
+  <div class="tableList people">
+    <p class="th-label">Add People</p>
     <div class="td-btns">
         <button 
             class="btn"
-            v-for="i in props.data.max" :key="i"
-            :class="(i === 2 || i=== 3) && 'on'"
+            v-for="(item,i) in props.data" :key="i"
+            :class="item.active && 'on'"
         >
-            <span class="text">{{ props.data.start + i }}</span>
-            <span class="text">Feb</span>
+            <span class="text">{{ item.num }}</span>
+            <span class="text">{{ item.text }}</span>
         </button>
     </div>
   </div>

@@ -8,12 +8,28 @@ const imgPath = (img) => {
 const props = defineProps({
     title: String
 })
+
+const active = ref('')
+
 watchEffect(() => {
   console.log(props.title)
 })
 </script>
 
 <template>
+  <div class="top-menu">
+    <span class="btn-link">
+      <span class="dot" />
+      <router-link :to="{ path: '/'}">Main</router-link>
+    </span>
+    <span class="btn-link">
+      <span class="dot" />
+      <router-link :to="{ path: '/sub1'}">SubPage</router-link>
+    </span>
+    <!-- <span class="btn-link">
+      <router-link :to="{ name: 'main'}">Main</router-link>
+    </span> -->
+  </div>
   <header class="p-head">
     <div class="wrap">
         <p class="p-head_title">{{props.title}}</p>

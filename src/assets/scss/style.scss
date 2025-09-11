@@ -5,7 +5,16 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 430px;
+  margin: auto;
 }
+.bg-gray{
+  background: #F3F3F7;
+  margin: 0 -20px;
+  padding:0 20px;
+  min-height: 100vh;
+}
+img{width:100%;}
 .p-contentBody{
     padding-top: 46px;
 }
@@ -14,4 +23,95 @@
 }
 .tabBox{
     margin-bottom: 50px;
+}
+.cardBox{
+  width: 100%;
+  aspect-ratio: 1/0.675;
+  position: relative;
+  margin-bottom: 20px;
+  .textBox{
+    position: absolute;
+    bottom:20px;
+    left:20px;
+    font-size: 12px;
+    color:#fff;
+    .title{
+      font-size:15px;
+      font-weight: bold;
+    }
+  }
+}
+.tableList{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  .th-label{
+    font-size: 15px;
+    color:#5F4CBB;
+  }
+  .td-btns{
+    margin-left:auto;
+    .btn{
+      width: 52px;
+      height:52px;
+      font-size: 12px;
+      border-radius: 10px;
+      margin-left: 12px;
+      box-shadow: 0 2px 4px rgba(117, 103, 191, 0.18);
+      color: #C5C1C9;
+      background: #f3f3f7;
+      &.on{
+        color: #5F4CBB;
+        background: #fff;
+      }
+      span{ display: block; }
+    }
+  }
+}
+.btn-comp{
+  background:#5F4CBB;
+  border-radius: 50px;
+  color:#fff;
+  &.large{
+    font-size: 14px;
+    padding: 15px 30px;
+  }
+  &.small{
+    font-size: 8px;
+    padding: 5px 13px;
+  }
+}
+
+
+.chk-area{
+  display: flex;
+  padding-left: 0;
+  margin-top: 30px;
+  .chk-item{
+    margin: auto;
+    width: 47%;
+    position: relative;
+    .title{
+      font-size: 17px;
+      text-align: center;
+      margin-top: 15px;
+    }
+    &:first-child{
+      margin-left: 0;
+      .title{
+        color: #5F4CBB;
+      }
+    }
+    &:last-child{
+      margin-right: 0;
+      .title{
+        color: #F9A58B;
+      }
+    }
+  }
+  .btn{
+    position: absolute;
+    bottom:25px;
+    right:10px;
+  }
 }

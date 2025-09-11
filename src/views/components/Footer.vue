@@ -18,7 +18,7 @@ const imgPath = (img) => {
 </script>
 
 <template>
-  <nav class="p-footer">
+  <div class="p-footer">
     <div class="p-footer_nav">
       <button 
         class="p-footer_nav-btn"
@@ -28,7 +28,7 @@ const imgPath = (img) => {
         <span class="img"><img :src="imgPath(item.img + (active ? '_on' : '_off'))" alt=""></span>
       </button>
     </div>
-  </nav>
+  </div>
 </template>
 
 <style lang="scss" scoped>

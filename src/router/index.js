@@ -1,0 +1,30 @@
+import { createWebHistory, createRouter } from "vue-router";
+
+import main from '@/views/pages/main.vue'
+import sub1 from '@/views/pages/subPage.vue'
+import sub2 from '@/views/pages/subPage2.vue'
+
+const routes = [
+    {
+        path:'/',
+        name:'main',
+        component: main
+    },
+    {
+        path:'/sub1',
+        name:'subpage',
+        component: sub1
+    },
+    {
+        path:'/sub2',
+        name:'subpage2',
+        component: sub2
+    }
+]
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+});
+
+export default router;
