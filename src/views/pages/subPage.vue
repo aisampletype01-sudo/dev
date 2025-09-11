@@ -7,13 +7,17 @@ import ImgSlider from '../section/imgSlider.vue'
 </script>
 
 <template>
-  <Header title="Hi, Jon Henry"/>
+  <Header title="Booking Trip"/>
   <div class="p-contentBody">
-    <SearchBox />
-    <Tab />
-    <ImgSlider />
+    <div class="cardBox">
+        <span class="thum"><img src="#" alt=""></span>
+        <div class="textBox">
+            <p class="title"><strong>Place Name Here</strong></p>
+            <p class="text">Place Name Here</p>
+        </div>
+    </div>
   </div>
-  <Footer />
+
 </template>
 
 <style lang="scss" scoped>
