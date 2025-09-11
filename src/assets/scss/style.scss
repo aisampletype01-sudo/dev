@@ -7,6 +7,9 @@
   min-height: 100vh;
   max-width: 430px;
   margin: auto;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
 }
 .subpage{
   min-height: 100vh;
