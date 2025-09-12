@@ -11,22 +11,24 @@ const slideList = ref([
   {img:'thum_s3'},
   {img:'thum1'},
 ])
-// vite는 require를 지원하지 않음.
 
+// vite는 require를 지원하지 않음.
 const imgPath = (img) => {
     return new URL(`/src/assets/images/${img}.png`, import.meta.url).href;
 }
+
+const active = ref(3)
 
 </script>
 
 <template>
   <div class="imgSlideBox">
     <div class="slide-big-thum">
-        <img :src="imgPath('thum1')" alt="">
+        <img :src="imgPath(slideList[active].img)" alt="">
     </div>
     <div class="slide-box">
         <ul class="slide-area">
-            <li class="slide-item" v-for="i in 8" :key="i">
+            <li class="slide-item" v-for="i in 8" :key="i" @click="active = i-1">
                 <span><img :src="imgPath(slideList[i-1].img)" alt=""></img></span>
             </li>
         </ul>
@@ -46,6 +48,16 @@ const imgPath = (img) => {
         width:100%;
         aspect-ratio: 1/0.65;
         margin-bottom: 10px;
+        overflow:hidden;
+        img{
+          position:relative;
+          top:50%;
+          left:50%;
+          transform: translate(-50%, -50%);
+          min-width:100%;
+          width:auto;
+          height:auto;
+        }
     }
     .slide-box{
       width:100%;

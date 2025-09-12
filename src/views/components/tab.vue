@@ -7,11 +7,8 @@ const tabList = ref([
   {text:'visited'},
 ])
 
-const active = ref('')
-const clickHender = (e)=>{
-    console.log(e.target)
-    console.log(e)
-}
+const active = ref(0)
+
 // const props = defineProps(['active']);
 
 watchEffect(() => {
@@ -25,12 +22,12 @@ watchEffect(() => {
     <div class="tabBox-area">
         <button 
             class="tabBtn"
-            :class="item.active && 'is-active'"
+            :class="active === i && 'is-active'"
             v-for="(item,i) in tabList" :key="i"
-            @click="clickHender"
+            @click="active = i"
         >
             <span class="text">{{ item.text }}</span>
-            <span v-if="item.active" class="bar"></span>
+            <span v-if="active === i" class="bar"></span>
         </button>
     </div>
   </div>
@@ -41,6 +38,7 @@ watchEffect(() => {
     &-area{
         display: flex;
         align-items: center;
+        position:relative;
     }
     .tabBtn{
         &:not(:last-child){margin-right:38px;}
@@ -48,6 +46,7 @@ watchEffect(() => {
         color:#c5c1c9;
         background:none;
         position:relative;
+        cursor:pointer;
         .text{
             padding-bottom:10px;
             text-transform: capitalize;
@@ -56,14 +55,18 @@ watchEffect(() => {
             position:absolute;
             bottom:0;
             left:0;
-            width:100%;
+            width:0%;
             height:1px;
-            background:#f9a58b;
-            display: none;
+            background:#F9A58B;
+            // display: none;
+            transition: .4s all;
         }
         &.is-active{
-            color: #f9a58b;
-            .bar{display:block;}
+            color: #F9A58B;
+            .bar{
+                // display:block;
+                width:100%;
+            }
         }
     }
 }

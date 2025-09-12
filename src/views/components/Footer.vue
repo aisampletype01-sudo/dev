@@ -9,7 +9,7 @@ const navList = ref([
   {text:'mypage', img:'btn_mypage'},
 ])
 
-const active = ref('')
+const active = ref(0)
 
 const imgPath = (img) => {
     return new URL(`/src/assets/images/${img}.png`, import.meta.url).href;
@@ -22,8 +22,9 @@ const imgPath = (img) => {
     <div class="p-footer_nav">
       <button 
         class="p-footer_nav-btn"
-        :class="active && 'is-active'"
+        :class="active === i && 'is-active'"
         v-for="(item,i) in navList" :key="i"
+        @click="active = i"
       >
         <span class="img"><img :src="imgPath(item.img + (active ? '_on' : '_off'))" alt=""></span>
       </button>
