@@ -26,7 +26,7 @@ const imgPath = (img) => {
         v-for="(item,i) in navList" :key="i"
         @click="active = i"
       >
-        <span class="img"><img :src="imgPath(item.img + (active ? '_on' : '_off'))" alt=""></span>
+        <span class="img"><img :src="imgPath(item.img + (active === i ? '_on' : '_off'))" alt=""></span>
       </button>
     </div>
   </div>

@@ -44,7 +44,7 @@ const link = ref([
       width:7px;
       height:7px;
       border-radius: 30px;
-      background: yellow;
+      background: gray;
       margin-right:5px;
     }
     &.is-active{
