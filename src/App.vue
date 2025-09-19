@@ -24,7 +24,6 @@ const link = ref([
       >
         <span class="dot" />
         <router-link :to="{ path: item.path}">{{ item.name }}</router-link>
-        <!-- {{ item.name }} -->
       </span>
     </div>
     <!--////-->
