@@ -7,20 +7,21 @@ import cardBoxBottom from '@/views/components/cardBoxBottom.vue'
 </script>
 
 <template>
-  <div class="bg-gray">
+  <div class="bg-gray subpage">
     <Header title="Confirm Booking"/>
 
     <div class="p-contentBody pb100">
       <CardBoxThum :data="{img:'thum_list1',title:'Place Name Here', text:'Place Name Here'}"/>
     </div>
-  </div> 
-  <div class="p-bottom">
-    <cardBoxBottom :data="{img:'img-card'}"/>
 
-    <div class="btn-area">
+    <div class="p-bottom">
+      <cardBoxBottom :data="{img:'img-card'}"/>
+    </div>
+
+    <div class="btn-area p-btn">
       <Btn text="Next Process" large="true"/>
     </div>
-  </div>
+  </div>   
 </template>
 
 <style lang="scss" scoped>
